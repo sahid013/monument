@@ -5,9 +5,35 @@ import Button from "./ui/Button";
 import Reveal from "./ui/Reveal";
 import styles from "./AboutSection.module.css";
 
+function CheckIcon() {
+  return (
+    <svg
+      className={styles.check}
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m5 12 5 5L20 7" />
+    </svg>
+  );
+}
+
+const leadershipPoints = [
+  "Conversion-optimized websites that turn quiet visitors into booked appointments",
+  "Local SEO that puts you first when nearby families search",
+  "Google Ads built to reach ready-to-buy customers, not waste clicks",
+  "Operations and systems that save hours of busywork every week",
+];
+
 export default function AboutSection() {
   return (
-    <Section id="about">
+    <Section id="about" className={styles.dark}>
       <div className={styles.layout}>
         {/* Replace this placeholder with your photo: drop a file at
             /public/about-me.jpg and swap in a <Image src="/about-me.jpg" .../>. */}
@@ -20,20 +46,34 @@ export default function AboutSection() {
           <Typography variant="sectionTitle" className={styles.title}>
             Hi, I&apos;m Alex, and I built Monument for one industry
           </Typography>
+
           <Typography variant="body" className={styles.paragraph}>
-            After years of watching monument and headstone companies get
-            overlooked by agencies that didn&apos;t understand them, I started
-            Monument to fix it. Generalist marketers treat this like any other
-            business. It isn&apos;t. The families you serve are making one of
-            the most emotional purchases of their lives, and your marketing has
-            to honor that.
+            Alex, founder of Monument, has spent years working directly with
+            monument and headstone companies to understand one thing:{" "}
+            <strong className={styles.lead}>
+              What actually earns trust, calls, and booked appointments.
+            </strong>
           </Typography>
+
+          <div className={styles.callout}>
+            <Typography variant="cardTitle" className={styles.calloutTitle}>
+              Under Alex&apos;s Leadership
+            </Typography>
+            <ul className={styles.list}>
+              {leadershipPoints.map((point) => (
+                <li key={point} className={styles.item}>
+                  <CheckIcon />
+                  <span className={styles.itemText}>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <Typography variant="body" className={styles.paragraph}>
-            Today we help monument businesses across America build a modern
-            online presence, win more of the right customers, and run leaner
-            operations. No bloated retainers, no vanity metrics, just growth
-            you can measure and a partner who actually gets your world.
+            When you work with us, you&apos;re not passed off to juniors. Your
+            business is built with intent, experience, and accountability.
           </Typography>
+
           <div className={styles.actions}>
             <Button variant="primary">Book a Free Call</Button>
           </div>

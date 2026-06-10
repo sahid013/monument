@@ -1,3 +1,15 @@
+/* Light theme: white section. Overrides the global dark tokens for this
+   subtree so the title, questions, answers, icons, and dividers adapt. */
+.light {
+  background: #ffffff;
+  --color-fg: #0a0a0a;
+  --text-strong: rgba(10, 10, 10, 0.85);
+  --text-muted: rgba(10, 10, 10, 0.7);
+  --text-subtle: rgba(10, 10, 10, 0.5);
+  --border-soft: rgba(10, 10, 10, 0.1);
+  --border-hover: rgba(10, 10, 10, 0.22);
+}
+
 .header {
   display: flex;
   flex-direction: column;

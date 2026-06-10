@@ -1,6 +1,7 @@
 import Section from "./ui/Section";
 import Eyebrow from "./ui/Eyebrow";
 import Typography from "./ui/Typography";
+import Button from "./ui/Button";
 import Reveal from "./ui/Reveal";
 import typography from "./ui/Typography.module.css";
 import styles from "./AudienceSection.module.css";
@@ -25,7 +26,7 @@ const points = [
 
 export default function AudienceSection() {
   return (
-    <Section id="clients">
+    <Section id="clients" className={styles.light}>
       <div className={styles.layout}>
         <Reveal className={styles.intro}>
           <Eyebrow>Who We Work With</Eyebrow>
@@ -38,6 +39,9 @@ export default function AudienceSection() {
             dressed up to look custom. We&apos;ve gone all-in on one thing, helping monument and headstone companies grow, and that focus is
             exactly why our clients pull ahead of theirs.
           </Typography>
+          <Button variant="primary" className={styles.cta}>
+            Book a Free Consultation
+          </Button>
         </Reveal>
 
         <div className={styles.points}>

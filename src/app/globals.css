@@ -9,13 +9,14 @@
   --surface-soft: rgba(255, 255, 255, 0.07);
   --surface-18: rgba(255, 255, 255, 0.18);
   --border-soft: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.2);
 
   /* ---- Radius tokens ---- */
   --radius-button: 0px;
 
   /* ---- Layout tokens ---- */
   --container-max: 1440px;
-  --container-pad-x: 90px;
+  --container-pad-x: 75px;
   --section-pad-y: clamp(88px, 11vw, 168px);
 }
 

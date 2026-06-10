@@ -57,7 +57,7 @@ export default function Navbar() {
         </nav>
 
         <Button variant="primary" size="sm" className={styles.cta}>
-          Book a Call
+          Get a Free Strategy Call
         </Button>
       </div>
     </header>

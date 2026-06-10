@@ -1,17 +1,34 @@
+/* Remove the section's default vertical rhythm so the full-bleed band sits
+   flush against the sections above and below it. */
+.section {
+  padding-block: 0;
+}
+
+/* Full-bleed panel: spans the full viewport width and stands a little taller.
+   The image background runs edge to edge while .inner keeps content aligned
+   to the site's gutters. */
 .panel {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 28px;
-  padding: clamp(56px, 8vw, 104px) 32px;
-  border: 1px solid var(--border-soft);
+  justify-content: center;
+  padding-block: clamp(80px, 11vw, 144px);
+  border-block: 1px solid var(--border-soft);
   background-color: #050505;
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url("/cta-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  width: 100%;
+  max-width: var(--container-max);
+  padding-inline: var(--container-pad-x);
 }
 
 .title {
@@ -30,6 +47,46 @@
   justify-content: center;
   gap: 16px;
   margin-top: 8px;
+}
+
+/* Three "things we can do" boxes. */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 32px 28px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(4px);
+  transition: border-color 0.2s ease;
+}
+
+.box:hover {
+  border-color: var(--border-hover);
+}
+
+.boxTitle {
+  margin: 0;
+}
+
+.boxText {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .boxes {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
 }
 
 @media (max-width: 720px) {

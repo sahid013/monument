@@ -1,3 +1,18 @@
+/* Light theme: #F1F1F1 section. Overrides the global dark tokens for this
+   subtree so titles, body, eyebrow, and borders adapt to a light surface. */
+.light {
+  background: #f1f1f1;
+  --color-fg: #0a0a0a;
+  /* Light text for the dark primary button on this light surface. */
+  --color-fg-on-light: #ffffff;
+  --text-strong: rgba(10, 10, 10, 0.85);
+  --text-muted: rgba(10, 10, 10, 0.7);
+  --text-subtle: rgba(10, 10, 10, 0.5);
+  --surface-soft: #e6e6e6;
+  --border-soft: rgba(10, 10, 10, 0.1);
+  --border-hover: rgba(10, 10, 10, 0.22);
+}
+
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,6 +33,11 @@
 
 .lead {
   margin: 0;
+}
+
+.cta {
+  align-self: flex-start;
+  margin-top: 8px;
 }
 
 .points {

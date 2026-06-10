@@ -1,3 +1,9 @@
+/* Pure-black section. Inherits the global dark tokens (white fg), so the
+   eyebrow, title, and body all read correctly on black. */
+.dark {
+  background: #000000;
+}
+
 .layout {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -37,6 +43,52 @@
 
 .paragraph {
   margin: 0;
+}
+
+/* Bold lead line that sits on its own row after the intro sentence. */
+.lead {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+/* Highlighted callout with a left accent bar (image reference). */
+.callout {
+  padding: 30px 34px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--border-soft);
+  border-left: 3px solid var(--color-fg);
+}
+
+.calloutTitle {
+  margin: 0 0 22px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.check {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-fg);
+}
+
+.itemText {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-strong);
 }
 
 .actions {

@@ -40,7 +40,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <Section id="faq">
+    <Section id="faq" className={styles.light}>
       <Reveal className={styles.header}>
         <Eyebrow>FAQ</Eyebrow>
         <Typography variant="sectionTitle" className={styles.title}>

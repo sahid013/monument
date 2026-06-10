@@ -1,3 +1,17 @@
+/* Light theme: pure-white section with #F1F1F1 cards.
+   Overrides the global dark tokens for this section's subtree, so every
+   token-driven component (cards, titles, body, eyebrow, borders) adapts. */
+.light {
+  background: #ffffff;
+  --color-fg: #0a0a0a;
+  --text-strong: rgba(10, 10, 10, 0.85);
+  --text-muted: rgba(10, 10, 10, 0.7);
+  --text-subtle: rgba(10, 10, 10, 0.5);
+  --surface-soft: #f1f1f1;
+  --border-soft: rgba(10, 10, 10, 0.1);
+  --border-hover: rgba(10, 10, 10, 0.22);
+}
+
 .header {
   display: flex;
   flex-direction: column;
