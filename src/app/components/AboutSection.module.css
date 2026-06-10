@@ -1,0 +1,54 @@
+.layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--surface-soft);
+  border: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.photoLabel {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 580px;
+}
+
+.title {
+  margin: 0;
+}
+
+.paragraph {
+  margin: 0;
+}
+
+.actions {
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .photo {
+    max-width: 420px;
+  }
+}

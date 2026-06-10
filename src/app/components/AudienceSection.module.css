@@ -1,0 +1,58 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 520px;
+}
+
+.title {
+  margin: 0;
+}
+
+.lead {
+  margin: 0;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 36px 0;
+  border-top: 1px solid var(--border-soft);
+}
+
+.point:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.point:last-child {
+  padding-bottom: 0;
+}
+
+.pointTitle {
+  margin: 0;
+}
+
+.pointDescription {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

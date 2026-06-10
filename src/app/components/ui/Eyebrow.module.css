@@ -1,0 +1,32 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Blinking white rectangle marker. */
+.dot {
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  background: var(--color-fg);
+  flex-shrink: 0;
+  animation: eyebrowBlink 1.4s ease-in-out infinite;
+}
+
+@keyframes eyebrowBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,96 @@
+/* Text styles — the single source of truth for typography.
+   Each class maps to a named Figma text style. Reuse these classes
+   anywhere a piece of text needs styling (directly or via <Typography />). */
+
+/* Eyebrow / overline */
+.eyebrow {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+/* Display title (Fraunces serif) */
+.displayTitle {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 70px;
+  line-height: 1.04;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-fg);
+}
+
+.titleItalic {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Section title (Fraunces serif) */
+.sectionTitle {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(36px, 4.4vw, 52px);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-fg);
+}
+
+/* Card / item title (Fraunces serif) */
+.cardTitle {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: var(--color-fg);
+}
+
+/* Small caption / meta (Inter) */
+.caption {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-subtle);
+}
+
+/* Body copy */
+.body {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Navigation link */
+.navLink {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-strong);
+  transition: color 0.15s ease;
+}
+
+.navLink:hover {
+  color: var(--color-fg);
+}
+
+/* Button label */
+.buttonLabel {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Stat number (Fraunces serif) */
+.statLabel {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-fg);
+}

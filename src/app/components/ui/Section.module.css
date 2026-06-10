@@ -1,0 +1,9 @@
+.section {
+  padding-block: var(--section-pad-y);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-inline: var(--container-pad-x);
+}

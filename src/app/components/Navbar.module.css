@@ -1,0 +1,84 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  animation: navIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Solid grey background layer (the stat-circle tone at full opacity).
+   Framer Motion fades its opacity with an ease-in-out curve as the user
+   scrolls, so the variant change is fully fluid. */
+.background {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(27, 27, 27);
+  border-bottom: 1px solid var(--border-soft);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 22px var(--container-pad-x);
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 25.5px; /* 85% of 30px */
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+/* 70% of the default small button, then scaled up by 1.1x. Doubled class
+   boosts specificity so it reliably overrides the shared .sm / buttonLabel
+   sizing. */
+.cta.cta {
+  margin-left: auto;
+  min-width: 0;
+  height: 38.5px; /* 35px * 1.1 */
+  padding: 0 19.8px; /* 18px * 1.1 */
+  font-size: 13.86px; /* 12.6px * 1.1 */
+}
+
+@keyframes navIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar {
+    animation: none;
+  }
+  .background {
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .navLinks {
+    display: none;
+  }
+}

@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 720px;
+  margin-bottom: 72px;
+}
+
+.title {
+  margin: 0;
+}
+
+.intro {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.gridItem {
+  height: 100%;
+}
+
+@media (max-width: 720px) {
+  .header {
+    margin-bottom: 48px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,42 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-button); /* 0px */
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Sizes */
+.md {
+  min-width: 215px;
+  height: 60px;
+  padding: 0 32px;
+}
+
+.sm {
+  height: 50px;
+  padding: 0 26px;
+}
+
+.primary {
+  background: var(--color-fg);
+  color: var(--color-fg-on-light);
+}
+
+.secondary {
+  background: var(--surface-18);
+  color: var(--color-fg);
+}
+
+@media (max-width: 720px) {
+  .button {
+    flex: 1;
+    min-width: 0;
+  }
+}

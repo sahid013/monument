@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 620px;
+  margin-bottom: 56px;
+}
+
+.title {
+  margin: 0;
+}
+
+.list {
+  border-top: 1px solid var(--border-soft);
+}
+
+@media (max-width: 720px) {
+  .header {
+    margin-bottom: 40px;
+  }
+}
