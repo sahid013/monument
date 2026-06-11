@@ -32,7 +32,7 @@ export default function AudienceSection() {
           <Eyebrow>Who We Work With</Eyebrow>
           <Typography variant="sectionTitle" className={styles.title}>
             We work with monument &amp; headstone businesses.{" "}
-            <em className={typography.titleItalic}>Only.</em>
+            <em className={typography.titleHighlight}>Only.</em>
           </Typography>
           <Typography variant="body" className={styles.lead}>
             No agencies juggling a hundred industries. No generic templates

@@ -27,7 +27,7 @@ export default function CtaSection() {
         <div className={styles.inner}>
           <Typography variant="sectionTitle" className={styles.title}>
             Ready to grow your{" "}
-            <em className={typography.titleItalic}>monument</em> business?
+            <em className={typography.titleHighlight}>monument</em> business?
           </Typography>
           <Typography variant="body" className={styles.text}>
             Book a free, no-pressure call. We&apos;ll look at where you are,

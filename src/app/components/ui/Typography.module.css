@@ -17,22 +17,35 @@
 .displayTitle {
   font-family: var(--font-fraunces), Georgia, serif;
   font-size: 70px;
-  line-height: 1.04;
+  /* A little extra leading so the highlight box on a second line never
+     bleeds up into the line above it. */
+  line-height: 1.14;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--color-fg);
 }
 
-.titleItalic {
-  font-style: italic;
-  font-weight: 500;
+/* Highlighted word — white box, dark text. Designed for dark backgrounds. */
+.titleHighlight {
+  display: inline;
+  background: #ffffff;
+  color: #0a0a0a;
+  font-style: normal;
+  font-weight: 700;
+  /* Minimal vertical padding so the white box hugs the word tightly. */
+  padding: 0 0.2em 1px;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* Section title (Fraunces serif) */
 .sectionTitle {
   font-family: var(--font-fraunces), Georgia, serif;
   font-size: clamp(36px, 4.4vw, 52px);
-  line-height: 1.1;
+  /* Extra leading so a highlight box on a wrapped line never bleeds into
+     the line above it (CTA, Services, Audience titles). */
+  line-height: 1.18;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--color-fg);

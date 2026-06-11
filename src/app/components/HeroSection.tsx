@@ -5,11 +5,12 @@ import Eyebrow from "./ui/Eyebrow";
 import Button from "./ui/Button";
 import StatCircle from "./ui/StatCircle";
 import Ticker from "./ui/Ticker";
+import TrustStrip from "./ui/TrustStrip";
 
 const stats = [
-  { value: "87%", label: "have no digital marketing" },
-  { value: "3.8x", label: "Avg Lead Increase" },
-  { value: "#1", label: "Google SEO Rankings" },
+  { value: "87%", label: "of monument companies have no digital presence" },
+  { value: "3.8x", label: "average increase in qualified leads within 90 days" },
+  { value: "#1", label: "local Google rankings for clients in their market" },
 ];
 
 function PhoneIcon() {
@@ -56,7 +57,7 @@ export default function HeroSection() {
           <Typography variant="displayTitle" className={styles.title}>
             Growth built for the
             <br />
-            <em className={typography.titleItalic}>monument</em> industry
+            <em className={typography.titleHighlight}>monument</em> industry
           </Typography>
 
           <Typography variant="body" className={styles.description}>
@@ -87,6 +88,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+
+      <TrustStrip />
 
       <Ticker items={tickerItems} />
     </section>

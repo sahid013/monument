@@ -1,0 +1,108 @@
+/* Trust strip — sits inside the hero between the content and the ticker.
+   Uses fixed white tones since it always renders on the dark hero. */
+.strip {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  padding-block: 22px;
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-inline: var(--container-pad-x);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.label {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.38);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.dividerV {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logoSep {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  margin-inline: 36px;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+}
+
+/* Placeholder shown until real logos are swapped in. */
+.placeholder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+  cursor: default;
+}
+
+.placeholder:hover {
+  opacity: 0.65;
+}
+
+.placeholder svg {
+  color: rgba(255, 255, 255, 0.9);
+  flex-shrink: 0;
+}
+
+.logoName {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+.logoItem img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.logoItem img:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 720px) {
+  .inner {
+    gap: 20px;
+  }
+  .logoSep {
+    margin-inline: 24px;
+  }
+  .logoName {
+    display: none;
+  }
+}

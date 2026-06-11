@@ -84,7 +84,7 @@ export default function ServicesSection() {
         <Eyebrow>What We Do</Eyebrow>
         <Typography variant="sectionTitle" className={styles.title}>
           Everything you need to{" "}
-          <em className={typography.titleItalic}>grow</em>, under one roof
+          <em className={typography.titleHighlight}>grow</em>, under one roof
         </Typography>
         <Typography variant="body" className={styles.intro}>
           Four services that work together to bring you more of the right
