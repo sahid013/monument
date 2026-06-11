@@ -91,6 +91,11 @@
   transition: opacity 0.2s ease;
 }
 
+/* First logo rendered 30% larger than the rest. */
+.logoItem:first-child img {
+  height: 52px;
+}
+
 .logoItem img:hover {
   opacity: 0.85;
 }

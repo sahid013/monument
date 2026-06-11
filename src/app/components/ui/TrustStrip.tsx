@@ -3,8 +3,8 @@ import Image from "next/image";
 import styles from "./TrustStrip.module.css";
 
 const logos = [
-  { src: "/bbb trust logo.webp", label: "BBB Accredited", width: 1728, height: 700 },
-  { src: "/Partner 2.jpeg", label: "Partner 2", width: 363, height: 258 },
+  { src: "/Builders Logo.svg", label: "Builders", width: 377, height: 279 },
+  { src: "/partner 2.svg", label: "Partner 2", width: 262, height: 262 },
 ];
 
 export default function TrustStrip() {
