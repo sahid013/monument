@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./TrustStrip.module.css";
 
 const logos = [
-  { src: "/Partner 1.jpeg", label: "Partner 1", width: 1262, height: 930 },
+  { src: "/bbb trust logo.webp", label: "BBB Accredited", width: 1728, height: 700 },
   { src: "/Partner 2.jpeg", label: "Partner 2", width: 363, height: 258 },
 ];
 
